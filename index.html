@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Implementation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img src="media/sau_logo.png" alt="Logo" class="logo" />
+        <h1>JavaScript Implementations for Web Development</h1>
+        <img
+          id="toggle-dark-mode"
+          src="media/dark_mode.png"
+          alt="Toggle Dark Mode"
+          class="dark-mode-toggle"
+        />
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Section 1: Basic Demonstrations -->
+      <section class="card-group">
+        <h2>Basic Demonstrations</h2>
+        <div class="card">
+          <h3>Page Alert</h3>
+          <p>Display an alert when the page loads</p>
+          <button id="reload" class="btn">Reload the Page</button>
+          <script src="alert.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Button Click Event</h3>
+          <p>Change color of button after click</p>
+          <button id="colorButton" class="btn">Click Me</button>
+          <script src="clickevent.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Light Bulb Toggle</h3>
+          <p>Toggle light bulb image</p>
+          <img
+            id="lightbulb"
+            src="media/lightbulb_off.png"
+            alt="Light Bulb"
+            class="lightbulb"
+            onclick="toggleLight()"
+          />
+          <script src="bulb.js"></script>
+        </div>
+      </section>
+
+      <!-- Section 2: Data Handling -->
+      <section class="card-group">
+        <h2>Data Handling</h2>
+        <div class="card">
+          <h3>Variables & Data Types</h3>
+          <div class="form-group">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label for="number">Enter a number:</label>
+            <input type="number" id="number" placeholder="Your Number" />
+          </div>
+          <div class="form-group">
+            <p>Are you a student?</p>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="studentYes"
+                name="isStudent"
+                value="true"
+              />
+              <label for="studentYes">Yes</label>
+              <input
+                type="radio"
+                id="studentNo"
+                name="isStudent"
+                value="false"
+              />
+              <label for="studentNo">No</label>
+            </div>
+          </div>
+          <button onclick="displayValues()" class="btn">Submit</button>
+          <div id="output" class="output"></div>
+          <script src="vdtio.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>JavaScript Operators</h3>
+          <div class="form-group">
+            <label for="inputA">Value for a:</label>
+            <input type="number" id="inputA" placeholder="Value of a" />
+          </div>
+          <div class="form-group">
+            <label for="inputB">Value for b:</label>
+            <input type="number" id="inputB" placeholder="Value of b" />
+          </div>
+          <button onclick="performOperations()" class="btn">
+            Run Operations
+          </button>
+          <div id="output1" class="output"></div>
+          <script src="operator.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Simple Calculator</h3>
+          <div class="form-group">
+            <input type="number" id="num2" placeholder="First number" />
+          </div>
+          <div class="form-group">
+            <input type="number" id="num3" placeholder="Second number" />
+          </div>
+          <div class="form-group">
+            <select id="operation">
+              <option value="add">Add (+)</option>
+              <option value="subtract">Subtract (-)</option>
+              <option value="multiply">Multiply (×)</option>
+              <option value="divide">Divide (÷)</option>
+            </select>
+          </div>
+          <button onclick="calculate()" class="btn">Calculate</button>
+          <div id="output7" class="output"></div>
+          <script src="calculator.js"></script>
+        </div>
+      </section>
+
+      <!-- Section 3: Control Flow -->
+      <section class="card-group">
+        <h2>Control Flow</h2>
+        <div class="card">
+          <h3>Grade Calculator</h3>
+          <div class="form-group">
+            <input type="number" id="marks" placeholder="Enter your marks" />
+          </div>
+          <button onclick="calculateGrade()" class="btn">Check Grade</button>
+          <div id="result" class="output"></div>
+          <script src="gradecalc.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Multiplication Table</h3>
+          <div class="form-group">
+            <input type="number" id="n" placeholder="Enter a number" />
+          </div>
+          <button onclick="getTable()" class="btn">Generate Table</button>
+          <div id="output3" class="output"></div>
+          <script src="multiplicationtable.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Control Flow & Loops</h3>
+          <div class="form-group">
+            <input type="number" id="number1" placeholder="Enter a number" />
+          </div>
+          <div class="button-group">
+            <button onclick="checkEvenOdd()" class="btn">Check Even/Odd</button>
+            <button onclick="printNumbers()" class="btn">Print 1-10</button>
+            <button onclick="countDown()" class="btn">Count Down</button>
+          </div>
+          <div id="output4" class="output"></div>
+          <script src="jscfl.js"></script>
+        </div>
+      </section>
+
+      <!-- Section 4: Functions -->
+      <section class="card-group">
+        <h2>Functions</h2>
+        <div class="card">
+          <h3>JavaScript Functions</h3>
+          <div class="form-group">
+            <input type="number" id="num1" placeholder="Enter a number" />
+          </div>
+          <div class="button-group">
+            <button onclick="calculateSquare()" class="btn">Find Square</button>
+            <button onclick="addNumbers()" class="btn">Add Numbers</button>
+            <button onclick="checkEvenOdd1()" class="btn">
+              Check Even/Odd
+            </button>
+          </div>
+          <div id="output6" class="output"></div>
+          <script src="functions.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Dynamic Color Mixer</h3>
+          <div class="form-group">
+            <label for="red"
+              >Red: <span id="redValue" class="color-value">0</span></label
+            >
+            <input
+              type="range"
+              id="red"
+              class="slider"
+              min="0"
+              max="255"
+              value="0"
+              oninput="updateColor()"
+            />
+          </div>
+          <div class="form-group">
+            <label for="green"
+              >Green: <span id="greenValue" class="color-value">0</span></label
+            >
+            <input
+              type="range"
+              id="green"
+              class="slider"
+              min="0"
+              max="255"
+              value="0"
+              oninput="updateColor()"
+            />
+          </div>
+          <div class="form-group">
+            <label for="blue"
+              >Blue: <span id="blueValue" class="color-value">0</span></label
+            >
+            <input
+              type="range"
+              id="blue"
+              class="slider"
+              min="0"
+              max="255"
+              value="0"
+              oninput="updateColor()"
+            />
+          </div>
+          <div id="colorBox" class="color-box"></div>
+          <script src="colormixer.js"></script>
+        </div>
+      </section>
+
+      <!-- Section 5: Forms -->
+      <section class="card-group">
+        <h2>Forms</h2>
+        <div class="card">
+          <h3>User Profile</h3>
+          <div class="form-group">
+            <label for="name1">Name:</label>
+            <input type="text" id="name1" placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Your Age" />
+          </div>
+          <div class="form-group">
+            <label for="isStudent">Student?</label>
+            <select id="isStudent">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <button onclick="displayProfile()" class="btn">Submit</button>
+          <div id="output5" class="output"></div>
+          <script src="userprofile.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Registration Form</h3>
+          <form id="Form">
+            <div class="form-group">
+              <label for="name2">Name:</label>
+              <input type="text" id="name2" name="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+          <script src="rform.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Form with Validation</h3>
+          <form id="registrationForm">
+            <div class="form-group">
+              <label for="name3">Name:</label>
+              <input type="text" id="name3" name="name" />
+              <span class="error" id="nameError">Name is required</span>
+            </div>
+            <div class="form-group">
+              <label for="email1">Email:</label>
+              <input type="email" id="email1" name="email" />
+              <span class="error" id="emailError">Valid email required</span>
+            </div>
+            <div class="form-group">
+              <label for="password1">Password:</label>
+              <input type="password" id="password1" name="password" />
+              <span class="error" id="passwordError">6+ characters</span>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+          <script src="rform-val.js"></script>
+        </div>
+      </section>
+
+      <!-- Section 6: DOM Manipulation -->
+      <section class="card-group">
+        <h2>DOM Manipulation</h2>
+        <div class="card">
+          <h3>DOM Elements</h3>
+          <div class="button-group">
+            <button onclick="changeHeading()" class="btn">
+              Change Heading
+            </button>
+            <button onclick="addNewParagraph()" class="btn">
+              Add Paragraph
+            </button>
+            <button id="darkmodetoggle" class="btn">Dark Mode Toggle</button>
+          </div>
+          <div class="dom-display">
+            <h4 id="domHeading">Welcome! This is a Dynamic Heading</h4>
+            <div id="domContent"></div>
+          </div>
+          <script src="domm.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Dynamic List</h3>
+          <div class="form-group">
+            <input type="text" id="itemInputs" placeholder="Enter a task" />
+          </div>
+          <button onclick="addItems()" class="btn">Add Task</button>
+          <ul id="taskLists" class="task-list"></ul>
+          <script src="domma.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Color Changer</h3>
+          <div id="colourBox" class="color-box">
+            Click to change background color
+          </div>
+          <button onclick="changeColour()" class="btn">Change Color</button>
+        </div>
+      </section>
+
+      <!-- Section 7: Applications -->
+      <section class="card-group">
+        <h2>Applications</h2>
+        <div class="card">
+          <h3>Task Manager</h3>
+          <div class="form-group">
+            <input type="text" id="taskInput" placeholder="Enter task" />
+          </div>
+          <button onclick="addTask()" class="btn">Add Task</button>
+          <ul id="taskList" class="task-list"></ul>
+          <script src="taskmanager.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Notes App</h3>
+          <div class="form-group">
+            <textarea id="noteInput" placeholder="Write your note"></textarea>
+          </div>
+          <div class="button-group">
+            <button onclick="saveNote()" class="btn">Save Note</button>
+            <button onclick="clearNote()" class="btn">Clear Note</button>
+          </div>
+          <div id="displayNote" class="output"></div>
+          <script src="notes.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Journal App</h3>
+          <div class="form-group">
+            <textarea
+              id="journalEntry"
+              placeholder="Write about your day"
+            ></textarea>
+          </div>
+          <button onclick="saveEntry()" class="btn">Save Entry</button>
+          <div id="entries" class="output"></div>
+          <script src="journal.js"></script>
+        </div>
+      </section>
+
+      <!-- Section 8: Advanced Features -->
+      <section class="card-group">
+        <h2>Advanced Features</h2>
+        <div class="card">
+          <h3>Digital Clock</h3>
+          <div id="clock" class="clock-display">00:00:00</div>
+          <button id="toggleClock" class="btn">Start Clock</button>
+          <script src="clock.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Event Handling</h3>
+          <div class="form-group">
+            <input type="text" id="keyLogger" placeholder="Type something..." />
+            <p class="small">Check console for logged keys</p>
+          </div>
+          <form id="myForm">
+            <div class="form-group">
+              <input type="text" placeholder="Enter your name" />
+            </div>
+            <button type="submit" class="btn">Submit Form</button>
+          </form>
+          <script src="jseh.js"></script>
+        </div>
+
+        <div class="card">
+          <h3>Counter App</h3>
+          <div class="button-group">
+            <button id="incrementBtn" class="btn">Increment</button>
+            <button id="decrementBtn" class="btn">Decrement</button>
+            <button id="resetBtn" class="btn">Reset</button>
+          </div>
+          <div id="counterDisplay" class="counter-display">0</div>
+          <script src="counter.js"></script>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 | JavaScript Implementations for Web Development</p>
+
+        <p>Made by TARUN DAS</p>
+      </div>
+    </footer>
+
+    <script src="darkmode.js"></script>
+  </body>
+</html>
